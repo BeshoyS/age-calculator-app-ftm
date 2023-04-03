@@ -1,37 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Age calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Day
-  DD
-
-  Month
-  MM
-
-  Year
-  YYYY
-
-  -- years
-  -- months
-  -- days
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <title>Age calculator app | Frontend Mentor</title>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="main">
+      <div class="inputs-container">
+        <form>
+          <div>
+            <div class="input-container">
+              <label for="day">Day</label>
+              <input type="number" id="day" />
+            </div>
+            <div class="input-container">
+              <label for="month">Month</label>
+              <input type="number" id="month" />
+            </div>
+            <div class="input-container">
+              <label for="year">Year</label>
+              <input type="number" id="year" />
+            </div>
+          </div>
+          <div class="button-container">
+            <button type="submit" id="submit">
+              <img src="./assets/images/icon-arrow.svg" alt="submit" />
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="results-container">
+        <p class="result">
+          <span class="result-number" id="yearsCount">38</span> years
+        </p>
+        <p class="result">
+          <span class="result-number" id="monthsCount">3</span> months
+        </p>
+        <p class="result">
+          <span class="result-number" id="daysCount">26</span> days
+        </p>
+      </div>
+    </main>
+  </body>
 </html>
