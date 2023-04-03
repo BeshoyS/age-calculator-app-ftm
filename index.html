@@ -21,20 +21,45 @@
           <div class="inputs-container">
             <div class="input-container">
               <label class="input-label" for="day">Day</label>
-              <input class="input" type="number" id="day" placeholder="DD"/>
+              <input
+                class="input"
+                type="number"
+                id="day"
+                placeholder="DD"
+                required
+              />
+              <p class="input-error" id="dayError"></p>
             </div>
             <div class="input-container">
               <label class="input-label" for="month">Month</label>
-              <input class="input" type="number" id="month" placeholder="MM" />
+              <input
+                class="input"
+                type="number"
+                id="month"
+                placeholder="MM"
+                required
+              />
+              <p class="input-error" id="monthError"></p>
             </div>
             <div class="input-container">
               <label class="input-label" for="year">Year</label>
-              <input class="input" type="number" id="year" placeholder="YYYY" />
+              <input
+                class="input"
+                type="number"
+                id="year"
+                placeholder="YYYY"
+                required
+              />
+              <p class="input-error" id="yearError"></p>
             </div>
           </div>
           <div class="button-container">
-            <button type="submit" id="submit" class="submit-btn">
-              <img class="submit-icon" src="./assets/images/icon-arrow.svg" alt="submit" />
+            <button type="submit" id="submitBtn" class="submit-btn">
+              <img
+                class="submit-icon"
+                src="./assets/images/icon-arrow.svg"
+                alt="submit"
+              />
             </button>
           </div>
         </form>
