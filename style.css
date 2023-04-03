@@ -1,17 +1,6 @@
 /* Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
-/* ### Primary
-
-- Purple: hsl(259, 100%, 65%)
-- Light red: hsl(0, 100%, 67%)
-
-### Neutral
-
-- White: hsl(0, 0%, 100%)
-- Off white: hsl(0, 0%, 94%)
-- Light grey: hsl(0, 0%, 86%)
-- Smokey grey: hsl(0, 1%, 44%)
-- Off black: hsl(0, 0%, 8%) */
+/* CSS Variables */
 :root {
   /* colors */
   --prim-purple: 259, 100%, 65%;
@@ -114,16 +103,16 @@ body {
 
 .main {
   background-color: hsl(var(--neut-white));
-  width: min(90%, 1000px);
+  width: min(95%, 600px);
   margin: 7rem auto 0 auto;
   padding: 2rem 1.5rem;
   border-radius: 1rem 1rem 4rem 1rem;
 }
 
 /* inputs */
-
 .inputs-container {
   display: flex;
+  justify-content: flex-start;
   gap: 0.75rem;
 }
 
@@ -140,6 +129,12 @@ body {
   padding: 0.75rem;
   border: 1px solid hsl(var(--neut-light-grey));
   border-radius: 0.3rem;
+}
+
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .input:focus {
@@ -173,13 +168,13 @@ body {
   background-color: hsl(var(--prim-purple));
   border: none;
   padding: 1rem;
+  transition: background-color 0.2s;
 }
 
 .submit-icon {
   stroke-width: 5;
   width: 1.25rem;
   cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
 }
 
 .submit-btn:hover {
@@ -194,10 +189,34 @@ body {
 .result {
   font-weight: 800;
   font-style: italic;
-  font-size: calc(var(--font-size) * 1.5);
+  font-size: 2.8rem;
+  font-size: clamp(2.8rem, 2.3rem + 2.2vw, 5rem);
   line-height: 1;
 }
 
 .result-number {
   color: hsl(var(--prim-purple));
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    padding: 2rem;
+  }
+
+  /* inputs */
+  .inputs-container {
+    gap: 1.5rem;
+  }
+  .input-container {
+    width: 20%;
+  }
+
+  /* submit Button */
+  .button-container {
+    padding-block: 2rem;
+  }
+  .submit-btn {
+    right: 0;
+    transform: translate(0%, -50%);
+  }
 }
